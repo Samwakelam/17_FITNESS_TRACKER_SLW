@@ -23,7 +23,9 @@ const dbUrl = process.env.DATABASE;
 const host = process.env.HOST;
 const options = {
   useNewUrlParser: true,
-  useUnifiedTopology: true,
+	useUnifiedTopology: true,
+	useCreateIndex: true,
+  useFindAndModify: false
 };
 
 mongoose.connect(
