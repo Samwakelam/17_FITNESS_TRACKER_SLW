@@ -101,14 +101,16 @@ async function handleFormSubmit(event) {
   let workoutData = {};
 
   if (workoutType === "cardio") {
+    console.log('exercise.js, handleFormSubmit workoutData cardio =', workoutData);
     workoutData.type = "cardio";
     workoutData.name = cardioNameInput.value.trim();
     workoutData.distance = Number(distanceInput.value.trim());
     workoutData.duration = Number(durationInput.value.trim());
   } else if (workoutType === "resistance") {
+    console.log('exercise.js, handleFormSubmit workoutData resistance =', workoutData);
     workoutData.type = "resistance";
     workoutData.name = nameInput.value.trim();
-    workoutData.weight = Number(weightInput.value.trim());
+    workoutData.weights = Number(weightInput.value.trim());
     workoutData.sets = Number(setsInput.value.trim());
     workoutData.reps = Number(repsInput.value.trim());
     workoutData.duration = Number(resistanceDurationInput.value.trim());
