@@ -39,7 +39,7 @@ mongoose.connect(
 	});
 })
 .catch((err) => {
-	handleError(err);
+	console.log(err);
 });
 
 
